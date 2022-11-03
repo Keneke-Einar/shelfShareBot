@@ -1,10 +1,22 @@
 from datetime import time
 from telebot import apihelper, types
+import mysql.connector
 import telebot
 import config
 
 bot = telebot.TeleBot(config.TOKEN)
 
+# database
+
+mydb = mysql.connector.connect(
+    host="localhost",
+    user="postgres",
+    passwd=""
+)
+
+mycursor = mydb.cursor()
+
+sqlFormula = "INSERT INTO books"
 
 # handlers
 
