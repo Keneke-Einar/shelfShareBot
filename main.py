@@ -16,8 +16,6 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
-sqlFormula = "INSERT INTO books"
-
 # handlers
 
 @bot.message_handler(commands=['start'])
